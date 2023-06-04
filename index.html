@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="calculator">
+            <div class="convert-display">
+                <div class="dropdown">
+                    <button id="mode">Standart</button>
+                    <div class="dropdown-content">
+                        <a data-mode="standard">Standard</a>
+                        <a data-mode="engineer">Engineer</a>
+                        <a data-mode="convert">Convert</a>
+                    </div>
+                </div>
+                <button id="history">History</button>
+            </div>
+            <div class="convert-display">
+                <input type="text" id="display" readonly />
+                <div rowspan="3" id="arrow" class="convert">&rarr;</div>
+                <input type="text" class="convert" id="second-display" readonly />
+            </div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><button class="memory">MR</button></td>
+                        <td><button class="memory">MC</button></td>
+                        <td><button class="memory">M+</button></td>
+                        <td><button class="memory">M-</button></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><button class="engi">ln</button></td>
+                        <td><button class="std" id="clear">C</button></td>
+                        <td><button class="std" id="negate">+/-</button></td>
+                        <td><button class="std" id="percent">%</button></td>
+                        <td><button class="std" id="divide">/</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="convert left">cm</button></td>
+                        <td><button class="convert left">m</button></td>
+                        <td><button class="convert left">km</button></td>
+
+                        <td><button class="engi">&pi;</button></td>
+                        <td><button class="std" id="seven">7</button></td>
+                        <td><button class="std" id="eight">8</button></td>
+                        <td><button class="std" id="nine">9</button></td>
+                        <td><button class="std" id="multiply">*</button></td>
+
+                        <td><button class="convert panel" id="seven">7</button></td>
+                        <td><button class="convert panel" id="eight">8</button></td>
+                        <td><button class="convert panel" id="nine">9</button></td>
+                        <td></td>
+                        <td class="convert"></td>
+                        <td><button class="convert right">cm</button></td>
+                        <td><button class="convert right">m</button></td>
+                        <td><button class="convert right">km</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="convert left">g</button></td>
+                        <td><button class="convert left">kg</button></td>
+                        <td><button class="convert left">t</button></td>
+
+                        <td><button class="engi">xⁿ</button></td>
+                        <td><button class="std" id="four">4</button></td>
+                        <td><button class="std" id="five">5</button></td>
+                        <td><button class="std" id="six">6</button></td>
+                        <td><button class="std" id="add">+</button></td>
+
+                        <td><button class="convert panel" id="four">4</button></td>
+                        <td><button class="convert panel" id="five">5</button></td>
+                        <td><button class="convert panel" id="six">6</button></td>
+                        <td></td>
+                        <td class="convert"></td>
+                        <td><button class="convert right">g</button></td>
+                        <td><button class="convert right">kg</button></td>
+                        <td><button class="convert right">t</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="convert left">cm²</button></td>
+                        <td><button class="convert left">m²</button></td>
+                        <td><button class="convert left">km²</button></td>
+
+                        <td><button class="engi">x!</button></td>
+                        <td><button class="std" id="one">1</button></td>
+                        <td><button class="std" id="two">2</button></td>
+                        <td><button class="std" id="three">3</button></td>
+                        <td><button class="std" id="subtract">-</button></td>
+
+                        <td><button class="convert panel" id="one">1</button></td>
+                        <td><button class="convert panel" id="two">2</button></td>
+                        <td><button class="convert panel" id="three">3</button></td>
+                        <td></td>
+                        <td class="convert">________</td>
+                        <td><button class="convert right">cm²</button></td>
+                        <td><button class="convert right">m²</button></td>
+                        <td><button class="convert right">km²</button></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td class="std"></td>
+
+                        <td><button class="engi">√x</button></td>
+                        <td><button class="std" id="decimal">.</button></td>
+                        <td><button class="std" id="zero">0</button></td>
+
+                        <td class="convert"></td>
+                        <td class="convert"></td>
+                        <td class="convert panel" style="margin-left: 50px"><button id="clear">C</button></td>
+                        <td class="convert panel"><button id="decimal">.</button></td>
+                        <td class="convert panel"><button id="zero">0</button></td>
+                        <td class="convert panel"><button class="equal" style="width: 75px">=</button></td>
+                        <td colspan="2"><button class="std equal">=</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div data-simplebar class="history"></div>
+    <script type="module" src="js/script.js"></script>
+</body>
+
+</html>
